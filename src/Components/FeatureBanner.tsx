@@ -23,10 +23,11 @@ const FeatureBanner = ({ image, type, position }: FeatureBannerProps) => {
     ),
     Highlights: (
       <>
-        <h1 className={styles.featureTitle}>Fuck social media</h1>
+        <h1 className={styles.featureTitle}>Better habits</h1>
         <h2>
-          Store all your highlights in your pocket and access from anywhere.
-          Scroll with intention.
+          Store all your highlights in your pocket and access from anywhere. No
+          more scrolling social media feeds at any free moment. Scroll with
+          intention.
         </h2>
       </>
     ),
