@@ -26,6 +26,7 @@ const FeatureBanner = ({ image, type, position }: FeatureBannerProps) => {
         <h1 className={styles.featureTitle}>Fuck social media</h1>
         <h2>
           Store all your highlights in your pocket and access from anywhere.
+          Scroll with intention.
         </h2>
       </>
     ),

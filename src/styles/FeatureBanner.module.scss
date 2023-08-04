@@ -2,14 +2,15 @@
 
 .featureBanner {
   width: 100%;
-  border-bottom: 0.5px solid $border;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   //Mobile height determined bu height of left and right section
+  border-bottom: 1px solid $border;
 
   @include breakpoint-mixin("Laptop") {
     height: 100dvh;
+    border-bottom: 0.5px solid $border;
   }
 
   .featureBanner_width {
@@ -47,17 +48,19 @@
     }
 
     .featureBanner_right {
-      height: 100dvh;
+      height: 80vh;
       width: 100%;
       flex-direction: column;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: justify;
+      // background-color: orange;
       // border-bottom: 0.5px solid $border;
       //border bottom for mobile when it is in column
 
       @include breakpoint-mixin("Laptop") {
+        height: 100dvh;
         border-bottom: 0px;
         height: 100%;
         width: 50%;
