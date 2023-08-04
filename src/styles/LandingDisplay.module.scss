@@ -47,21 +47,24 @@
       .laptop {
         position: absolute;
         left: -60%;
-        height: 85%;
+        // height: 85%;
+        height: 250px;
 
         @include breakpoint-mixin("Mobile_M") {
           left: -35%;
         }
 
         @include breakpoint-mixin("Mobile_L") {
-          height: 87%;
+          // height: 87%;
+          height: 260px;
           left: -30%;
         }
 
         @include breakpoint-mixin("Tablet") {
           position: relative;
           left: 0%;
-          height: 90%;
+          // height: 90%;
+          height: 265px;
         }
 
         @include breakpoint-mixin("Laptop") {
