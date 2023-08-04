@@ -7,7 +7,7 @@
   border-bottom: 0.5px solid $border;
   // background-color: orange;
 
-  @include breakpoint-mixin("laptop-small") {
+  @include breakpoint-mixin("Laptop") {
     height: 90dvh;
   }
 
@@ -16,12 +16,12 @@
     display: flex;
     flex-direction: column;
 
-    @include breakpoint-mixin("laptop-small") {
+    @include breakpoint-mixin("Laptop") {
       height: 100%;
       flex-direction: row;
     }
 
-    @include breakpoint-mixin("desktop") {
+    @include breakpoint-mixin("Desktop") {
       width: 95%;
     }
 
@@ -32,14 +32,16 @@
       position: relative;
       // background-color: red;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
 
-      // background-color: orange;
-
-      @include breakpoint-mixin("laptop-small") {
+      @include breakpoint-mixin("Laptop") {
         width: 60%;
         height: 100%;
+      }
+
+      @include breakpoint-mixin("Desktop_L") {
+        width: 65%;
       }
 
       .laptop {
@@ -47,9 +49,35 @@
         left: -60%;
         height: 85%;
 
-        @include breakpoint-mixin("laptop-small") {
+        @include breakpoint-mixin("Mobile_M") {
+          left: -35%;
+        }
+
+        @include breakpoint-mixin("Mobile_L") {
+          height: 87%;
           left: -30%;
+        }
+
+        @include breakpoint-mixin("Tablet") {
+          position: relative;
+          left: 0%;
+          height: 90%;
+        }
+
+        @include breakpoint-mixin("Laptop") {
+          position: absolute;
+          left: -70%;
           height: 85%;
+        }
+
+        @include breakpoint-mixin("Laptop_L") {
+          left: -5%;
+          height: 75%;
+        }
+
+        @include breakpoint-mixin("Desktop") {
+          left: -2%;
+          height: 75%;
         }
       }
     }
@@ -58,22 +86,26 @@
       //Making left and right section height add to 86dvh so that it fits the screen
       //Tbf this can really just be a div with padding if you want to add more text, but this is cool for now
       //Obvs only padding for mobile view
-      height: 41dvh;
+      padding: 20px 0px 30px 0px;
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
 
-      @include breakpoint-mixin("laptop-small") {
+      @include breakpoint-mixin("Laptop") {
         height: 100%;
         width: 40%;
+      }
+
+      @include breakpoint-mixin("Desktop_L") {
+        width: 35%;
       }
 
       h1 {
         margin-bottom: 20px;
 
-        @include breakpoint-mixin("laptop-small") {
+        @include breakpoint-mixin("Laptop") {
           margin-bottom: 50px;
         }
       }
@@ -83,13 +115,17 @@
         border-radius: 4px;
         padding: 5px 10px;
 
-        @include breakpoint-mixin("laptop-small") {
+        @include breakpoint-mixin("Laptop") {
           cursor: pointer;
           // margin-left: 10px;
           &:hover {
             opacity: 0.5;
             background-color: $hover;
           }
+        }
+
+        @include breakpoint-mixin("Desktop") {
+          padding: 7px 10px;
         }
       }
     }

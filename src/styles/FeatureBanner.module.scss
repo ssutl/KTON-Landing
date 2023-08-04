@@ -8,7 +8,7 @@
   justify-content: center;
   //Mobile height determined bu height of left and right section
 
-  @include breakpoint-mixin("laptop-small") {
+  @include breakpoint-mixin("Laptop") {
     height: 100dvh;
   }
 
@@ -17,13 +17,13 @@
     display: flex;
     flex-direction: column;
 
-    @include breakpoint-mixin("laptop-small") {
+    @include breakpoint-mixin("Laptop") {
       height: 100%;
       flex-direction: row;
       width: 95%;
     }
 
-    @include breakpoint-mixin("desktop") {
+    @include breakpoint-mixin("Desktop") {
       width: 95%;
     }
 
@@ -35,7 +35,7 @@
       align-items: center;
 
       //Only 50% of width on laptop
-      @include breakpoint-mixin("laptop-small") {
+      @include breakpoint-mixin("Laptop") {
         height: 100%;
         width: 50%;
       }
@@ -54,10 +54,10 @@
       justify-content: center;
       align-items: center;
       text-align: justify;
-      border-bottom: 0.5px solid $border;
+      // border-bottom: 0.5px solid $border;
       //border bottom for mobile when it is in column
 
-      @include breakpoint-mixin("laptop-small") {
+      @include breakpoint-mixin("Laptop") {
         border-bottom: 0px;
         height: 100%;
         width: 50%;
@@ -71,14 +71,14 @@
       h2 {
         width: 90%;
 
-        @include breakpoint-mixin("laptop-small") {
+        @include breakpoint-mixin("Laptop") {
           max-width: 80%;
         }
       }
     }
   }
 
-  @include breakpoint-mixin("laptop-small") {
+  @include breakpoint-mixin("Laptop") {
     .left {
       .featureBanner_left {
         border-right: 0.5px solid $border;
@@ -97,13 +97,42 @@
   .laptop {
     img {
       position: absolute;
-      left: -55%;
-      height: 45%;
+      left: -50%;
+      height: 42%;
 
-      @include breakpoint-mixin("laptop-small") {
+      @include breakpoint-mixin("Mobile_M") {
+        left: -48%;
+        height: 48%;
+      }
+
+      @include breakpoint-mixin("Mobile_L") {
+        left: -40%;
+        height: 52%;
+      }
+
+      @include breakpoint-mixin("Tablet") {
         position: relative;
         left: 0%;
+        height: 60%;
+      }
+
+      @include breakpoint-mixin("Laptop") {
+        // position: absolute;
+        position: relative;
+        left: 0%;
+        height: 40%;
+      }
+
+      @include breakpoint-mixin("Laptop_L") {
+        height: 55%;
+      }
+
+      @include breakpoint-mixin("Desktop") {
         height: 50%;
+      }
+
+      @include breakpoint-mixin("Desktop_L") {
+        height: 45%;
       }
     }
   }

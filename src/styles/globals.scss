@@ -21,6 +21,7 @@ body {
   color: white;
   font-weight: 100;
   height: fit-content;
+  overflow-x: hidden;
 
   .react-colorful__saturation {
     border-radius: 0px;
@@ -40,10 +41,30 @@ body {
     margin: 0px;
     padding: 0px;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 34px;
 
-    @include breakpoint-mixin("laptop-small") {
+    @include breakpoint-mixin("Mobile_L") {
+      font-size: 36px;
+    }
+
+    @include breakpoint-mixin("Tablet") {
+      font-size: 39px;
+    }
+
+    @include breakpoint-mixin("Laptop") {
       font-size: 38px;
+    }
+
+    @include breakpoint-mixin("Laptop_L") {
+      font-size: 43px;
+    }
+
+    @include breakpoint-mixin("Desktop") {
+      font-size: 48px;
+    }
+
+    @include breakpoint-mixin("Desktop_L") {
+      font-size: 60px;
     }
   }
 
@@ -51,7 +72,27 @@ body {
     margin: 0px;
     padding: 0px;
     font-weight: 300;
-    font-size: 25px;
+    font-size: 26px;
+
+    @include breakpoint-mixin("Mobile_L") {
+      font-size: 30px;
+    }
+
+    @include breakpoint-mixin("Tablet") {
+      font-size: 33px;
+    }
+
+    @include breakpoint-mixin("Laptop_L") {
+      font-size: 36px;
+    }
+
+    @include breakpoint-mixin("Desktop") {
+      font-size: 40px;
+    }
+
+    @include breakpoint-mixin("Desktop_L") {
+      font-size: 54px;
+    }
   }
 
   h3 {
@@ -60,12 +101,16 @@ body {
     font-weight: 200;
     font-size: 18px;
 
-    @include breakpoint-mixin("laptop-small") {
+    @include breakpoint-mixin("Laptop") {
       font-size: 19px;
     }
 
-    @include breakpoint-mixin("desktop") {
+    @include breakpoint-mixin("Desktop") {
       font-size: 20px;
+    }
+
+    @include breakpoint-mixin("Desktop_L") {
+      font-size: 24px;
     }
   }
 
@@ -73,15 +118,23 @@ body {
     margin: 0px;
     padding: 0px;
     font-weight: 100;
-    font-size: 16px;
+    font-size: 15px;
     // line-height: 30px;
 
-    @include breakpoint-mixin("laptop-small") {
+    @include breakpoint-mixin("Tablet") {
+      font-size: 17px;
+    }
+
+    @include breakpoint-mixin("Laptop") {
       font-size: 15px;
     }
 
-    @include breakpoint-mixin("desktop") {
+    @include breakpoint-mixin("Desktop") {
       font-size: 18px;
+    }
+
+    @include breakpoint-mixin("Desktop_L") {
+      font-size: 22px;
     }
   }
 
