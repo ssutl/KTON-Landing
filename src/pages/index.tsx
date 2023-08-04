@@ -54,7 +54,7 @@ export default function Landing({
           name="twitter:description"
           content="A platform to organise, annotate and export your kindle highlights 📖📝"
         />
-        <meta name="twitter:image" content="/Resources/book-icon.jpg" />
+        <meta name="twitter:image" content="/Resources/SEOIMAGE.jpg" />
 
         <link
           rel="apple-touch-icon"
@@ -63,7 +63,7 @@ export default function Landing({
         />
 
         <title>KTON</title>
-        <link rel="icon" href="/Resources/SEOIMAGE_SMALL.jpg" />
+        <link rel="icon" href="/Resources/book-icon.jpg" />
       </Head>
 
       <div className={styles.main}>
