@@ -59,7 +59,7 @@ const Terms = ({ total }: InferGetStaticPropsType<typeof getStaticProps>) => {
         />
 
         <title>KTON Terms</title>
-        <link rel="icon" href="/Resources/SEOIMAGE_SMALL.jpg" />
+        <meta name="twitter:image" content="/Resources/book-icon.jpg" />
       </Head>
 
       <Navbar total={total.toLocaleString()} />
