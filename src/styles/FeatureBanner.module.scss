@@ -101,13 +101,8 @@
       height: 42%;
 
       @include breakpoint-mixin("Mobile_M") {
-        left: -48%;
-        height: 48%;
-      }
-
-      @include breakpoint-mixin("Mobile_L") {
-        left: -40%;
-        height: 52%;
+        left: -60%;
+        height: 45%;
       }
 
       @include breakpoint-mixin("Tablet") {
