@@ -1,0 +1,97 @@
+@import "../styles/Breakpoints.module.scss";
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 0.5px solid $border;
+  // background-color: orange;
+
+  @include breakpoint-mixin("laptop-small") {
+    height: 90dvh;
+  }
+
+  .main_width {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint-mixin("laptop-small") {
+      height: 100%;
+      flex-direction: row;
+    }
+
+    @include breakpoint-mixin("desktop") {
+      width: 95%;
+    }
+
+    .main_left {
+      //When its in mobile view, setting height of laptop sectopn to smaller
+      height: 45dvh;
+      width: 100%;
+      position: relative;
+      // background-color: red;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      // background-color: orange;
+
+      @include breakpoint-mixin("laptop-small") {
+        width: 60%;
+        height: 100%;
+      }
+
+      .laptop {
+        position: absolute;
+        left: -60%;
+        height: 85%;
+
+        @include breakpoint-mixin("laptop-small") {
+          left: -30%;
+          height: 85%;
+        }
+      }
+    }
+
+    .main_right {
+      //Making left and right section height add to 86dvh so that it fits the screen
+      //Tbf this can really just be a div with padding if you want to add more text, but this is cool for now
+      //Obvs only padding for mobile view
+      height: 41dvh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      @include breakpoint-mixin("laptop-small") {
+        height: 100%;
+        width: 40%;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+
+        @include breakpoint-mixin("laptop-small") {
+          margin-bottom: 50px;
+        }
+      }
+
+      p {
+        background-color: $kton-blue;
+        border-radius: 4px;
+        padding: 5px 10px;
+
+        @include breakpoint-mixin("laptop-small") {
+          cursor: pointer;
+          // margin-left: 10px;
+          &:hover {
+            opacity: 0.5;
+            background-color: $hover;
+          }
+        }
+      }
+    }
+  }
+}

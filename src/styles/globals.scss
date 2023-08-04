@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400&display=swap");
+@import "../styles/Breakpoints.module.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: $bg;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Urbanist", sans-serif;
+  color: white;
+  font-weight: 100;
+  height: fit-content;
+
+  .react-colorful__saturation {
+    border-radius: 0px;
+  }
+  /* Round bottom corners of the last element: `Hue` for `ColorPicker` or `Alpha` for `AlphaColorPicker` */
+  .react-colorful__last-control {
+    border-radius: 0px;
+  }
+
+  .toolTip {
+    background-color: #393939;
+    font-weight: 550;
+    padding: 5px 10px;
+  }
+
+  h1 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 400;
+    font-size: 30px;
+
+    @include breakpoint-mixin("laptop-small") {
+      font-size: 38px;
+    }
+  }
+
+  h2 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 300;
+    font-size: 25px;
+  }
+
+  h3 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 200;
+    font-size: 18px;
+
+    @include breakpoint-mixin("laptop-small") {
+      font-size: 19px;
+    }
+
+    @include breakpoint-mixin("desktop") {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 100;
+    font-size: 16px;
+    // line-height: 30px;
+
+    @include breakpoint-mixin("laptop-small") {
+      font-size: 15px;
+    }
+
+    @include breakpoint-mixin("desktop") {
+      font-size: 18px;
+    }
+  }
+
+  input,
+  textarea {
+    font-family: "Urbanist", sans-serif;
+    font-size: 16px;
+    color: white;
+  }
+}
+
+body::-webkit-scrollbar {
+  height: 100%;
+  background-color: rgb(45, 41, 41);
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(70, 68, 68, 0.428);
+  border: 1px solid transparent;
+  background-clip: content-box;
+  border-radius: 10px;
+  height: 40px;
+}

@@ -1,0 +1,116 @@
+@import "../styles/Breakpoints.module.scss";
+
+.featureBanner {
+  width: 100%;
+  border-bottom: 0.5px solid $border;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  //Mobile height determined bu height of left and right section
+
+  @include breakpoint-mixin("laptop-small") {
+    height: 100dvh;
+  }
+
+  .featureBanner_width {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint-mixin("laptop-small") {
+      height: 100%;
+      flex-direction: row;
+      width: 95%;
+    }
+
+    @include breakpoint-mixin("desktop") {
+      width: 95%;
+    }
+
+    .featureBanner_left {
+      height: 100dvh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      //Only 50% of width on laptop
+      @include breakpoint-mixin("laptop-small") {
+        height: 100%;
+        width: 50%;
+      }
+
+      .featureBanner_left_image {
+        height: 80%;
+        width: 80%;
+      }
+    }
+
+    .featureBanner_right {
+      height: 100dvh;
+      width: 100%;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
+      border-bottom: 0.5px solid $border;
+      //border bottom for mobile when it is in column
+
+      @include breakpoint-mixin("laptop-small") {
+        border-bottom: 0px;
+        height: 100%;
+        width: 50%;
+      }
+
+      .featureTitle {
+        margin-bottom: 50px;
+      }
+
+      h1,
+      h2 {
+        width: 90%;
+
+        @include breakpoint-mixin("laptop-small") {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+
+  @include breakpoint-mixin("laptop-small") {
+    .left {
+      .featureBanner_left {
+        border-right: 0.5px solid $border;
+      }
+    }
+
+    .right {
+      flex-direction: row-reverse;
+
+      .featureBanner_right {
+        border-right: 0.5px solid $border;
+      }
+    }
+  }
+
+  .laptop {
+    img {
+      position: absolute;
+      left: -55%;
+      height: 45%;
+
+      @include breakpoint-mixin("laptop-small") {
+        position: relative;
+        left: 0%;
+        height: 50%;
+      }
+    }
+  }
+
+  .mobile {
+    img {
+      height: 90%;
+    }
+  }
+}
