@@ -1,0 +1,33 @@
+@import "../styles/Breakpoints.module.scss";
+
+.termsPage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 20px 0px;
+
+  .termsPage_Width {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint-mixin("Laptop") {
+      width: 95%;
+    }
+
+    h1,
+    p {
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 30px;
+
+      @include breakpoint-mixin("Laptop") {
+        line-height: 35px;
+      }
+    }
+  }
+}

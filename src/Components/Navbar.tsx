@@ -11,7 +11,7 @@ export default function Navbar({ total }: { total: string }) {
     <>
       <div className={styles.navbar}>
         <div className={styles.navbarWidth}>
-          <h3 onClick={() => router.push("/Home")}>KTON</h3>
+          <h3 onClick={() => router.push("/")}>KTON</h3>
           <div className={styles.navigationButtons}>
             <p
               onClick={() => router.push("https://app.kton.xyz")}
@@ -19,7 +19,7 @@ export default function Navbar({ total }: { total: string }) {
             >
               Get Started
             </p>
-            <p onClick={() => router.push("/About")}>Terms</p>
+            <p onClick={() => router.push("/Terms")}>Terms</p>
           </div>
         </div>
       </div>

@@ -32,7 +32,6 @@ export default function Landing({
   return (
     <>
       <Head>
-        <title>KTON</title>
         <link rel="icon" href="/Resources/SEOIMAGE_SMALL.jpg" />
         <meta name="theme-color" content="#000000" />
         <meta
