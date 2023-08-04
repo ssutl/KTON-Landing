@@ -66,6 +66,10 @@ body {
     @include breakpoint-mixin("Desktop_L") {
       font-size: 60px;
     }
+
+    @include portrait-min-width-mixin("Vertical_Display") {
+      font-size: 70px;
+    }
   }
 
   h2 {
@@ -92,6 +96,10 @@ body {
 
     @include breakpoint-mixin("Desktop_L") {
       font-size: 54px;
+    }
+
+    @include portrait-min-width-mixin("Vertical_Display") {
+      font-size: 58px;
     }
   }
 

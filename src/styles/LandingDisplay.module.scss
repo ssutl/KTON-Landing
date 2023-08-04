@@ -11,6 +11,10 @@
     height: 90dvh;
   }
 
+  @include portrait-min-width-mixin("Vertical_Display") {
+    height: fit-content;
+  }
+
   .main_width {
     width: 90%;
     display: flex;
@@ -25,15 +29,19 @@
       width: 95%;
     }
 
+    @include portrait-min-width-mixin("Vertical_Display") {
+      flex-direction: column;
+    }
+
     .main_left {
       //When its in mobile view, setting height of laptop sectopn to smaller
       height: 45dvh;
       width: 100%;
       position: relative;
-      // background-color: red;
       display: flex;
       justify-content: center;
       align-items: center;
+      // background-color: red;
 
       @include breakpoint-mixin("Laptop") {
         width: 60%;
@@ -42,6 +50,11 @@
 
       @include breakpoint-mixin("Desktop_L") {
         width: 65%;
+      }
+
+      @include portrait-min-width-mixin("Vertical_Display") {
+        height: 45vh;
+        width: 100%;
       }
 
       .laptop {
@@ -82,6 +95,12 @@
           left: -2%;
           height: 75%;
         }
+
+        @include portrait-min-width-mixin("Vertical_Display") {
+          position: relative;
+          left: 0%;
+          height: 70%;
+        }
       }
     }
 
@@ -95,6 +114,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      // background-color: orange;
 
       @include breakpoint-mixin("Laptop") {
         height: 100%;
@@ -103,6 +123,12 @@
 
       @include breakpoint-mixin("Desktop_L") {
         width: 35%;
+      }
+
+      @include portrait-min-width-mixin("Vertical_Display") {
+        // padding: 0px;
+        height: fit-content;
+        width: 100%;
       }
 
       h1 {

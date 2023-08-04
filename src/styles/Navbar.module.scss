@@ -13,6 +13,10 @@
     height: 5dvh;
   }
 
+  @include portrait-min-width-mixin("Vertical_Display") {
+    height: 3dvh;
+  }
+
   .navbarWidth {
     width: 90%;
     height: 100%;
@@ -71,6 +75,10 @@
 
   @include breakpoint-mixin("Desktop") {
     height: 5dvh;
+  }
+
+  @include portrait-min-width-mixin("Vertical_Display") {
+    height: 3dvh;
   }
 
   .headerWidth {

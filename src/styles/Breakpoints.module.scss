@@ -7,6 +7,7 @@ $breakpoints: (
   "Laptop_L": 1366px,
   "Desktop": 1800px,
   "Desktop_L": 2560px,
+  "Vertical_Display": 1080px,
 );
 
 //Dark Theme
@@ -31,4 +32,17 @@ $kton-blue: #3fcdfc;
       @content;
     }
   }
+}
+
+@mixin portrait-min-width-mixin($breakpoint) {
+  $minWidth: map-get($breakpoints, $breakpoint);
+  @media screen and (min-width: $minWidth) and (orientation: portrait) {
+    @content;
+  }
+}
+
+// Usage example:
+// Styles for portrait displays with a minimum width of "Vertical_Display"
+@include portrait-min-width-mixin("Vertical_Display") {
+  // Your specific styles for this resolution in portrait mode
 }

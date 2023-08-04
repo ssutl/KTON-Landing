@@ -13,6 +13,10 @@
     border-bottom: 0.5px solid $border;
   }
 
+  @include portrait-min-width-mixin("Vertical_Display") {
+    height: fit-content;
+  }
+
   .featureBanner_width {
     width: 90%;
     display: flex;
@@ -28,6 +32,10 @@
       width: 95%;
     }
 
+    @include portrait-min-width-mixin("Vertical_Display") {
+      flex-direction: column;
+    }
+
     .featureBanner_left {
       height: 100dvh;
       width: 100%;
@@ -39,6 +47,11 @@
       @include breakpoint-mixin("Laptop") {
         height: 100%;
         width: 50%;
+      }
+
+      @include portrait-min-width-mixin("Vertical_Display") {
+        height: 60dvh;
+        width: 100%;
       }
 
       .featureBanner_left_image {
@@ -64,6 +77,11 @@
         border-bottom: 0px;
         height: 100%;
         width: 50%;
+      }
+
+      @include portrait-min-width-mixin("Vertical_Display") {
+        height: 60dvh;
+        width: 100%;
       }
 
       .featureTitle {
@@ -93,6 +111,22 @@
 
       .featureBanner_right {
         border-right: 0.5px solid $border;
+      }
+    }
+  }
+
+  @include portrait-min-width-mixin("Vertical_Display") {
+    .left {
+      .featureBanner_left {
+        border-right: 0px;
+      }
+    }
+
+    .right {
+      flex-direction: column;
+
+      .featureBanner_right {
+        border-right: 0px;
       }
     }
   }
@@ -131,6 +165,10 @@
 
       @include breakpoint-mixin("Desktop_L") {
         height: 45%;
+      }
+
+      @include portrait-min-width-mixin("Vertical_Display") {
+        height: 50%;
       }
     }
   }
