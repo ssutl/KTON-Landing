@@ -81,8 +81,8 @@ const Terms = ({ total }: InferGetStaticPropsType<typeof getStaticProps>) => {
             control. We make no claim of ownership over your personal content.
           </p>
           <p>
-            The service is provided "as is" with no guarantees. We are not
-            liable for any loss of notes data or issues relating to use.
+            The service is provided &quot;as is&quot; with no guarantees. We are
+            not liable for any loss of notes data or issues relating to use.
           </p>
           <p>
             We reserve the right to terminate accounts, restrict activity, or
