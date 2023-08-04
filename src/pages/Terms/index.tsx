@@ -74,7 +74,7 @@ const Terms = ({ total }: InferGetStaticPropsType<typeof getStaticProps>) => {
           <p>
             By accessing the KTON website, you agree to be bound by these terms.
             They may be modified over time, with revisions indicated by the
-            "Last updated” date.
+            &quot;Last updated&quot; date.
           </p>
           <p>
             Your imported notes data remains under your full ownership and
