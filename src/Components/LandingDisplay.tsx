@@ -18,8 +18,8 @@ const LandingDisplay = () => {
         <div className={styles.main_right}>
           <h1>
             Welcome to KTON, an all in one highlight manager for your e-books.
-            We are currently in beta, so please be patient with us as we work
-            out the kinks.
+            We&lsquo;ll help you organise, annotate and export your kindle
+            highlights. 📖📝
           </h1>
           <p onClick={() => router.push("https://app.kton.xyz")}>Demo Site</p>
         </div>
