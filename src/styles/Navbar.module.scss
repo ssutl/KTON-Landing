@@ -9,6 +9,14 @@
   box-sizing: border-box;
   // color: white;
 
+  @include breakpoint-mixin("Tablet") {
+    height: 5dvh;
+  }
+
+  @include breakpoint-mixin("Laptop") {
+    height: 7dvh;
+  }
+
   @include breakpoint-mixin("Desktop") {
     height: 5dvh;
   }
@@ -72,6 +80,14 @@
   align-items: center;
   box-sizing: border-box;
   height: 7dvh;
+
+  @include breakpoint-mixin("Tablet") {
+    height: 5dvh;
+  }
+
+  @include breakpoint-mixin("Laptop") {
+    height: 7dvh;
+  }
 
   @include breakpoint-mixin("Desktop") {
     height: 5dvh;
