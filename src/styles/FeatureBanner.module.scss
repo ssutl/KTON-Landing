@@ -8,7 +8,7 @@
   //Mobile height determined bu height of left and right section
   border-bottom: 1px solid $border;
 
-  @include breakpoint-mixin("Laptop") {
+  @include breakpoint-mixin("Laptop_S") {
     height: 100dvh;
     border-bottom: 0.5px solid $border;
   }
@@ -22,13 +22,13 @@
     display: flex;
     flex-direction: column;
 
-    @include breakpoint-mixin("Laptop") {
+    @include breakpoint-mixin("Laptop_S") {
       height: 100%;
       flex-direction: row;
       width: 95%;
     }
 
-    @include breakpoint-mixin("Desktop") {
+    @include breakpoint-mixin("Desktop_M") {
       width: 95%;
     }
 
@@ -43,8 +43,8 @@
       justify-content: center;
       align-items: center;
 
-      //Only 50% of width on laptop
-      @include breakpoint-mixin("Laptop") {
+      //Only 50% of width on Laptop_S
+      @include breakpoint-mixin("Laptop_S") {
         height: 100%;
         width: 50%;
       }
@@ -72,7 +72,7 @@
       // border-bottom: 0.5px solid $border;
       //border bottom for mobile when it is in column
 
-      @include breakpoint-mixin("Laptop") {
+      @include breakpoint-mixin("Laptop_S") {
         height: 100dvh;
         border-bottom: 0px;
         height: 100%;
@@ -92,14 +92,14 @@
       h2 {
         width: 90%;
 
-        @include breakpoint-mixin("Laptop") {
+        @include breakpoint-mixin("Laptop_S") {
           max-width: 80%;
         }
       }
     }
   }
 
-  @include breakpoint-mixin("Laptop") {
+  @include breakpoint-mixin("Laptop_S") {
     .left {
       .featureBanner_left {
         border-right: 0.5px solid $border;
@@ -131,7 +131,7 @@
     }
   }
 
-  .laptop {
+  .Laptop_S {
     img {
       position: absolute;
       left: -50%;
@@ -148,18 +148,18 @@
         height: 60%;
       }
 
-      @include breakpoint-mixin("Laptop") {
+      @include breakpoint-mixin("Laptop_S") {
         // position: absolute;
         position: relative;
         left: 0%;
         height: 40%;
       }
 
-      @include breakpoint-mixin("Laptop_L") {
+      @include breakpoint-mixin("Laptop_S") {
         height: 55%;
       }
 
-      @include breakpoint-mixin("Desktop") {
+      @include breakpoint-mixin("Desktop_M") {
         height: 50%;
       }
 

@@ -7,7 +7,7 @@
   border-bottom: 0.5px solid $border;
   // background-color: orange;
 
-  @include breakpoint-mixin("Laptop") {
+  @include breakpoint-mixin("Laptop_S") {
     height: 90dvh;
   }
 
@@ -20,12 +20,12 @@
     display: flex;
     flex-direction: column;
 
-    @include breakpoint-mixin("Laptop") {
+    @include breakpoint-mixin("Laptop_S") {
       height: 100%;
       flex-direction: row;
     }
 
-    @include breakpoint-mixin("Desktop") {
+    @include breakpoint-mixin("Desktop_M") {
       width: 95%;
     }
 
@@ -34,21 +34,24 @@
     }
 
     .main_left {
-      //When its in mobile view, setting height of laptop sectopn to smaller
+      //When its in mobile view, setting height of Laptop_S sectopn to smaller
       height: 45dvh;
       width: 100%;
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      // background-color: red;
 
-      @include breakpoint-mixin("Laptop") {
-        width: 60%;
+      @include breakpoint-mixin("Laptop_S") {
+        width: 50%;
         height: 100%;
       }
 
-      @include breakpoint-mixin("Desktop_L") {
+      @include breakpoint-mixin("Desktop_S") {
+        width: 60%;
+      }
+
+      @include breakpoint-mixin("Desktop_M") {
         width: 65%;
       }
 
@@ -80,20 +83,34 @@
           height: 265px;
         }
 
-        @include breakpoint-mixin("Laptop") {
+        @include breakpoint-mixin("Laptop_S") {
           position: absolute;
           left: -70%;
-          height: 85%;
+          height: 465px;
+        }
+
+        @include breakpoint-mixin("Laptop_M") {
+          height: 475px;
+          left: -45%;
         }
 
         @include breakpoint-mixin("Laptop_L") {
-          left: -5%;
-          height: 75%;
+          height: 485px;
+          left: -35%;
         }
 
-        @include breakpoint-mixin("Desktop") {
-          left: -2%;
-          height: 75%;
+        @include breakpoint-mixin("Desktop_S") {
+          height: 550px;
+          left: -5%;
+        }
+
+        @include breakpoint-mixin("Desktop_M") {
+          height: 650px;
+          left: 0%;
+        }
+
+        @include breakpoint-mixin("Desktop_L") {
+          height: 870px;
         }
 
         @include portrait-min-width-mixin("Vertical_Display") {
@@ -116,12 +133,16 @@
       align-items: flex-start;
       // background-color: orange;
 
-      @include breakpoint-mixin("Laptop") {
+      @include breakpoint-mixin("Laptop_S") {
         height: 100%;
+        width: 50%;
+      }
+
+      @include breakpoint-mixin("Desktop_S") {
         width: 40%;
       }
 
-      @include breakpoint-mixin("Desktop_L") {
+      @include breakpoint-mixin("Desktop_M") {
         width: 35%;
       }
 
@@ -134,7 +155,7 @@
       h1 {
         margin-bottom: 20px;
 
-        @include breakpoint-mixin("Laptop") {
+        @include breakpoint-mixin("Laptop_S") {
           margin-bottom: 50px;
         }
       }
@@ -144,7 +165,7 @@
         border-radius: 4px;
         padding: 5px 10px;
 
-        @include breakpoint-mixin("Laptop") {
+        @include breakpoint-mixin("Laptop_S") {
           cursor: pointer;
           // margin-left: 10px;
           &:hover {
@@ -153,7 +174,7 @@
           }
         }
 
-        @include breakpoint-mixin("Desktop") {
+        @include breakpoint-mixin("Desktop_M") {
           padding: 7px 10px;
         }
       }

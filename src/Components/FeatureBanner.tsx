@@ -2,7 +2,7 @@ import styles from "../styles/FeatureBanner.module.scss";
 
 export interface FeatureBannerProps {
   image: "Book" | "Highlights" | "Share" | "Library";
-  type: "laptop" | "mobile";
+  type: "Laptop_S" | "mobile";
   position: "left" | "right";
 }
 
