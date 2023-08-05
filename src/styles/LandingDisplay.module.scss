@@ -62,12 +62,12 @@
 
       .laptop {
         position: absolute;
-        left: -60%;
+        left: -35%;
         // height: 85%;
-        height: 250px;
+        height: 175px;
 
         @include breakpoint-mixin("Mobile_M") {
-          left: -35%;
+          height: 250px;
         }
 
         @include breakpoint-mixin("Mobile_L") {
@@ -85,8 +85,8 @@
 
         @include breakpoint-mixin("Laptop_S") {
           position: absolute;
-          left: -70%;
-          height: 465px;
+          left: -74%;
+          height: 455px;
         }
 
         @include breakpoint-mixin("Laptop_M") {

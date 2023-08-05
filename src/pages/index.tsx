@@ -39,9 +39,9 @@ export default function Landing({
         <Navbar total={total.toLocaleString()} />
         <LandingDisplay />
         <FeatureBanner image="Highlights" type="mobile" position="right" />
-        <FeatureBanner image="Book" type="Laptop_S" position="left" />
-        <FeatureBanner image="Share" type="Laptop_S" position="right" />
+        <FeatureBanner image="Book" type="laptop" position="left" />
         <FeatureBanner image="Library" type="mobile" position="right" />
+        <FeatureBanner image="Share" type="laptop" position="left" />
       </div>
     </>
   );

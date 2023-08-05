@@ -131,44 +131,65 @@
     }
   }
 
-  .Laptop_S {
+  .laptop {
     img {
       position: absolute;
-      left: -50%;
-      height: 42%;
+      left: -48%;
+      height: 260px;
+
 
       @include breakpoint-mixin("Mobile_M") {
-        left: -60%;
-        height: 45%;
+        left: -35%;
+        height: 280px;
+      }
+
+      @include breakpoint-mixin("Mobile_L") {
+        // height: 87%;
+        height: 300px;
+        left: -30%;
       }
 
       @include breakpoint-mixin("Tablet") {
         position: relative;
         left: 0%;
-        height: 60%;
+        // height: 90%;
+        height: 370px;
       }
 
       @include breakpoint-mixin("Laptop_S") {
-        // position: absolute;
-        position: relative;
-        left: 0%;
-        height: 40%;
+        position: absolute;
+        left: -20%;
+        height: 380px;
       }
 
-      @include breakpoint-mixin("Laptop_S") {
-        height: 55%;
+      @include breakpoint-mixin("Laptop_M") {
+        left: -10%;
+        height: 410px;
+      }
+
+      @include breakpoint-mixin("Laptop_L") {
+        height: 470px;
+      }
+
+      @include breakpoint-mixin("Desktop_S") {
+        left: -12%;
+        height: 540px;
       }
 
       @include breakpoint-mixin("Desktop_M") {
-        height: 50%;
+        left: 0%;
+        position: relative;
+        height: 450px;
       }
 
       @include breakpoint-mixin("Desktop_L") {
-        height: 45%;
+        height: 600px;
       }
 
       @include portrait-min-width-mixin("Vertical_Display") {
-        height: 50%;
+        position: relative;
+        left: 0%;
+        height: 530px;
       }
     }
   }
