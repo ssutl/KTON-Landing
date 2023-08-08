@@ -48,6 +48,7 @@ const FeatureBanner = ({ image, type, position }: FeatureBannerProps) => {
         <h2>
           Stay on top of your digital library, quickly sort, filter and search
           through all your highlights and books.
+          {/* <p>Finding your highlights made easy, happy reading with KTON!</p> */}
         </h2>
       </>
     ),

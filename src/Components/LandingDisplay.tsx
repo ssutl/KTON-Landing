@@ -21,9 +21,6 @@ const LandingDisplay = () => {
             We&lsquo;ll help you organise, annotate and export your kindle
             highlights. 📖📝
           </h1>
-          <p onClick={() => router.push("https://app.kton.xyz/Import")}>
-            Demo Site
-          </p>
         </div>
       </div>
     </div>
