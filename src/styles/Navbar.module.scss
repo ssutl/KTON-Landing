@@ -79,13 +79,14 @@
 .header {
   width: 100%;
   display: flex;
-  border-bottom: 0.5px solid $border;
+  border-bottom: 1.5px solid $border;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   height: 7dvh;
 
   @include breakpoint-mixin("Tablet") {
+    border-bottom: 0.5px solid $border;
     height: 5dvh;
   }
 
