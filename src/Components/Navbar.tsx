@@ -20,7 +20,7 @@ export default function Navbar({ total }: { total: string }) {
               Get Started
             </p>
             <p onClick={() => router.push("/Terms")}>Terms</p>
-            {/* <p onClick={() => router.push("/Membership")}>Pricing</p> */}
+            <p onClick={() => router.push("/Membership")}>Pricing</p>
           </div>
         </div>
       </div>

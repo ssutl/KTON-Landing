@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   //Mobile height determined bu height of left and right section
-  border-bottom: 1px solid $border;
+  border-bottom: 1.5px solid $border;
 
   @include breakpoint-mixin("Laptop_S") {
     height: 100dvh;
@@ -136,7 +136,6 @@
       position: absolute;
       left: -48%;
       height: 260px;
-
 
       @include breakpoint-mixin("Mobile_M") {
         left: -35%;
