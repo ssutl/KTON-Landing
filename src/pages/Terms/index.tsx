@@ -4,27 +4,7 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import axios from "axios";
 import styles from "../../styles/Terms.module.scss";
 
-export const getStaticProps: GetStaticProps<{
-  total: number;
-}> = async (context) => {
-  const response = await axios({
-    method: "GET",
-    url: `${process.env.NEXT_PUBLIC_BACKENDURL}/total-highlights`,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
-  console.log("response: ", response.data);
-
-  return {
-    props: {
-      total: response.data,
-    },
-  };
-};
-
-const Terms = ({ total }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Terms = () => {
   return (
     <>
       <Head>
@@ -62,7 +42,6 @@ const Terms = ({ total }: InferGetStaticPropsType<typeof getStaticProps>) => {
         <link rel="icon" href="/Resources/book-icon.jpg" />
       </Head>
 
-      <Navbar total={total.toLocaleString()} />
       <div className={styles.termsPage}>
         <div className={styles.termsPage_Width}>
           <h1>Terms of Service</h1>

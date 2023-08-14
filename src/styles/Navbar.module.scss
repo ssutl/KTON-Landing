@@ -48,6 +48,15 @@
       display: flex;
 
       #mainButton {
+        width: 55px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include breakpoint-mixin("Mobile_M") {
+          width: fit-content;
+        }
+
         background-color: $kton-blue;
         font-weight: 350;
       }
