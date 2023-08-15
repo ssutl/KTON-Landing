@@ -25,8 +25,6 @@ export default function Navbar() {
 
   //Display the navbar
 
-  if (!total) return null;
-
   return (
     <>
       <div className={styles.navbar}>
@@ -47,7 +45,9 @@ export default function Navbar() {
       </div>
       <div className={styles.header}>
         <div className={styles.headerWidth}>
-          <p>{`OVER ${total.toLocaleString()} IMPORTED HIGHLIGHTS`}</p>
+          <p>{`OVER ${
+            total ? total.toLocaleString() : "10, 000"
+          } IMPORTED HIGHLIGHTS`}</p>
         </div>
       </div>
     </>

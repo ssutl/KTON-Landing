@@ -28,14 +28,15 @@
     display: grid;
     width: 90%;
     overflow-x: hidden;
-    padding-top: 50px;
+    padding: 50px 0px;
+    row-gap: 80px;
 
     @include breakpoint-mixin("Laptop_S") {
       width: 95%;
     }
 
     @include breakpoint-mixin("Tablet") {
-      gap: 50px;
+      column-gap: 50px;
 
       grid-template-columns: repeat(
         2,
@@ -44,7 +45,7 @@
     }
 
     @include breakpoint-mixin("Laptop_S") {
-      gap: 100px;
+      column-gap: 100px;
 
       grid-template-columns: repeat(
         4,
