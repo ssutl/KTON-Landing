@@ -28,7 +28,6 @@
     display: grid;
     width: 90%;
     overflow-x: hidden;
-    height: 100%;
     padding-top: 50px;
 
     @include breakpoint-mixin("Laptop_S") {
