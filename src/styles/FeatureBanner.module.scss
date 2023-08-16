@@ -37,14 +37,20 @@
     }
 
     .featureBanner_left {
-      height: 100dvh;
+      height: fit-content;
+      padding: 30px 0px;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
 
+      @include breakpoint-mixin("Tablet") {
+        padding: 50px 0px;
+      }
+
       //Only 50% of width on Laptop_S
       @include breakpoint-mixin("Laptop_S") {
+        padding: 0px;
         height: 100%;
         width: 50%;
       }
@@ -53,26 +59,22 @@
         height: 60dvh;
         width: 100%;
       }
-
-      .featureBanner_left_image {
-        height: 80%;
-        width: 80%;
-      }
     }
 
     .featureBanner_right {
-      height: 80vh;
+      height: fit-content;
+      padding: 70px 0px;
       width: 100%;
       flex-direction: column;
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: justify;
       // background-color: orange;
       // border-bottom: 0.5px solid $border;
       //border bottom for mobile when it is in column
 
       @include breakpoint-mixin("Laptop_S") {
+        padding: 0px;
         height: 100dvh;
         border-bottom: 0px;
         height: 100%;
@@ -133,24 +135,20 @@
 
   .laptop {
     img {
-      position: absolute;
-      left: -48%;
-      height: 260px;
+      // position: absolute;
+      position: relative;
+      left: 0%;
+      height: 170px;
 
       @include breakpoint-mixin("Mobile_M") {
-        left: -35%;
-        height: 280px;
+        height: 205px;
       }
 
       @include breakpoint-mixin("Mobile_L") {
-        // height: 87%;
-        height: 300px;
-        left: -30%;
+        height: 230px;
       }
 
       @include breakpoint-mixin("Tablet") {
-        position: relative;
-        left: 0%;
         // height: 90%;
         height: 370px;
       }
@@ -195,7 +193,39 @@
 
   .mobile {
     img {
-      height: 90%;
+      height: 410px;
+
+      @include breakpoint-mixin("Mobile_M") {
+        height: 440px;
+      }
+
+      @include breakpoint-mixin("Mobile_L") {
+        height: 500px;
+      }
+
+      @include breakpoint-mixin("Tablet") {
+        height: 700px;
+      }
+
+      @include breakpoint-mixin("Laptop_S") {
+        height: 570px;
+      }
+
+      @include breakpoint-mixin("Laptop_M") {
+        height: 610px;
+      }
+
+      @include breakpoint-mixin("Desktop_S") {
+        height: 700px;
+      }
+
+      @include breakpoint-mixin("Desktop_M") {
+        height: 730px;
+      }
+
+      @include breakpoint-mixin("Desktop_L") {
+        height: 800px;
+      }
     }
   }
 }

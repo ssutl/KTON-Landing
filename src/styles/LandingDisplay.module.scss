@@ -56,32 +56,30 @@
         width: 65%;
       }
 
+      @include breakpoint-mixin("Desktop_L") {
+        width: 60%;
+      }
+
       @include portrait-min-width-mixin("Vertical_Display") {
         height: 45vh;
         width: 100%;
       }
 
       .laptop {
-        position: absolute;
-        left: -35%;
-        // height: 85%;
-        height: 175px;
+        position: relative;
+        left: 0%;
+        height: 160px;
 
         @include breakpoint-mixin("Mobile_M") {
-          height: 250px;
+          height: 195px;
         }
 
         @include breakpoint-mixin("Mobile_L") {
-          // height: 87%;
-          height: 260px;
-          left: -30%;
+          height: 230px;
         }
 
         @include breakpoint-mixin("Tablet") {
-          position: relative;
-          left: 0%;
-          // height: 90%;
-          height: 265px;
+          height: 350px;
         }
 
         @include breakpoint-mixin("Laptop_S") {
@@ -111,7 +109,7 @@
         }
 
         @include breakpoint-mixin("Desktop_L") {
-          height: 870px;
+          height: 800px;
         }
 
         @include portrait-min-width-mixin("Vertical_Display") {
@@ -145,6 +143,10 @@
 
       @include breakpoint-mixin("Desktop_M") {
         width: 35%;
+      }
+
+      @include breakpoint-mixin("Desktop_L") {
+        width: 40%;
       }
 
       @include portrait-min-width-mixin("Vertical_Display") {
