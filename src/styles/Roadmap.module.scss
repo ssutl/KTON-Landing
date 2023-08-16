@@ -25,53 +25,16 @@
 
   .roadMapPage_Width {
     height: fit-content;
-    display: grid;
-    width: 90%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
     overflow-x: hidden;
     padding: 50px 0px;
-    row-gap: 80px;
+    align-items: center;
+    width: 90%;
 
     @include breakpoint-mixin("Laptop_S") {
-      width: 95%;
-    }
-
-    @include breakpoint-mixin("Tablet") {
-      column-gap: 50px;
-
-      grid-template-columns: repeat(
-        2,
-        1fr
-      ); /* Adjust the number of columns as needed */
-    }
-
-    @include breakpoint-mixin("Laptop_S") {
-      column-gap: 100px;
-
-      grid-template-columns: repeat(
-        4,
-        1fr
-      ); /* Adjust the number of columns as needed */
-    }
-
-    @include portrait-min-width-mixin("Vertical_Display") {
-      grid-template-columns: repeat(
-        2,
-        1fr
-      ); /* Adjust the number of columns as needed */
-    }
-
-    @include breakpoint-mixin("laptop-wide") {
-      grid-template-columns: repeat(
-        5,
-        1fr
-      ); /* Adjust the number of columns as needed */
-    }
-
-    @include breakpoint-mixin("Desktop-wide") {
-      grid-template-columns: repeat(
-        6,
-        1fr
-      ); /* Adjust the number of columns as needed */
+      width: 50%;
     }
   }
 }

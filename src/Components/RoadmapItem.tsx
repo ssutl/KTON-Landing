@@ -10,9 +10,12 @@ interface RoadmapItemProps {
 const RoadmapItem = ({ data }: RoadmapItemProps) => {
   return (
     <div className={styles.container}>
-      <div className={styles.image}>
-        <img src={data.cover} alt={data.title} />
-      </div>
+      {data.cover !== "" && (
+        <div className={styles.image}>
+          <img src={data.cover} alt={data.title} />
+        </div>
+      )}
+      <h1 id={styles.title}>{data.title}</h1>
       {data.tags.length > 0 && (
         <div className={styles.tagBanner}>
           {data.tags.map((tag, index) => (
@@ -27,7 +30,6 @@ const RoadmapItem = ({ data }: RoadmapItemProps) => {
         </div>
       )}
       <h3 id={styles.date}>{convertDateFunc(data.date)}</h3>
-      <h1 id={styles.title}>{data.title}</h1>
       <p id={styles.description}>{data.description}</p>
     </div>
   );
