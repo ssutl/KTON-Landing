@@ -137,7 +137,7 @@ body {
     }
 
     @include breakpoint-mixin("Desktop_M") {
-      font-size: 18px;
+      font-size: 20px;
     }
 
     @include breakpoint-mixin("Desktop_L") {
