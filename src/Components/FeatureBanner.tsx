@@ -1,12 +1,11 @@
 import styles from "../styles/FeatureBanner.module.scss";
 
 export interface FeatureBannerProps {
-  image: "Book" | "Highlights" | "Share" | "Library";
-  type: "laptop" | "mobile";
-  position: "left" | "right";
+  image: "Book" | "Highlights" | "Share" | "Library" | "Graphs";
+  side: "left" | "right";
 }
 
-const FeatureBanner = ({ image, type, position }: FeatureBannerProps) => {
+const FeatureBanner = ({ image, side }: FeatureBannerProps) => {
   const url = `/Resources/${image}.png`;
 
   const description = {
@@ -44,11 +43,21 @@ const FeatureBanner = ({ image, type, position }: FeatureBannerProps) => {
     ),
     Library: (
       <>
-        <h1 className={styles.featureTitle}>Quick Search</h1>
+        <h1 className={styles.featureTitle}>Welcome to KTON</h1>
         <h2>
-          Stay on top of your digital library, quickly sort, filter and search
-          through all your highlights and books.
-          {/* <p>Finding your highlights made easy, happy reading with KTON!</p> */}
+          An all in one highlight manager for your e-books. We&lsquo;ll help you
+          organise, annotate and export your kindle highlights. Finding your
+          highlights made easy, happy reading with KTON! 📖📝
+        </h2>
+      </>
+    ),
+    Graphs: (
+      <>
+        <h1 className={styles.featureTitle}>Visualize your reading</h1>
+        <h2>
+          KTON allows you to visualize your reading habits and progress. See how
+          many books you&apos;ve read, how many highlights you&apos;ve made and
+          how many words you&apos;ve read.
         </h2>
       </>
     ),
@@ -56,9 +65,7 @@ const FeatureBanner = ({ image, type, position }: FeatureBannerProps) => {
 
   return (
     <div className={styles.featureBanner}>
-      <div
-        className={`${styles.featureBanner_width} ${styles[type]} ${styles[position]}`}
-      >
+      <div className={`${styles.featureBanner_width} ${styles[side]}`}>
         <div className={styles.featureBanner_left}>
           <img src={url} alt={image} />
         </div>

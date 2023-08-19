@@ -6,15 +6,11 @@
   display: flex;
   justify-content: center;
   //Mobile height determined bu height of left and right section
-  border-bottom: 1.5px solid $border;
+  border-bottom: 0.5px solid $border_mobile;
 
-  @include breakpoint-mixin("Laptop_S") {
+  @include breakpoint-mixin("Laptop_M") {
     height: 100dvh;
-    border-bottom: 0.5px solid $border;
-  }
-
-  @include portrait-min-width-mixin("Vertical_Display") {
-    height: fit-content;
+    border-bottom: 0.5px solid $border_laptop;
   }
 
   .featureBanner_width {
@@ -22,13 +18,9 @@
     display: flex;
     flex-direction: column;
 
-    @include breakpoint-mixin("Laptop_S") {
+    @include breakpoint-mixin("Laptop_M") {
       height: 100%;
       flex-direction: row;
-      width: 95%;
-    }
-
-    @include breakpoint-mixin("Desktop_M") {
       width: 95%;
     }
 
@@ -37,53 +29,38 @@
     }
 
     .featureBanner_left {
-      height: fit-content;
-      padding: 30px 0px;
       width: 100%;
       display: flex;
-      justify-content: center;
       align-items: center;
+      padding: 40px 0;
 
-      @include breakpoint-mixin("Tablet") {
-        padding: 50px 0px;
+      @include breakpoint-mixin("Laptop_M") {
+        width: 55%;
       }
 
-      //Only 50% of width on Laptop_S
-      @include breakpoint-mixin("Laptop_S") {
-        padding: 0px;
-        height: 100%;
-        width: 50%;
-      }
-
-      @include portrait-min-width-mixin("Vertical_Display") {
-        height: 60dvh;
+      img {
         width: 100%;
+        // height: 300px;
+        object-fit: cover;
+        border-radius: 5px;
+
+        @include breakpoint-mixin("Laptop_S") {
+        }
       }
     }
 
     .featureBanner_right {
-      height: fit-content;
-      padding: 70px 0px;
+      padding: 40px 0;
       width: 100%;
-      flex-direction: column;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      align-items: center;
-      // background-color: orange;
-      // border-bottom: 0.5px solid $border;
-      //border bottom for mobile when it is in column
+      align-items: flex-end;
 
-      @include breakpoint-mixin("Laptop_S") {
-        padding: 0px;
-        height: 100dvh;
-        border-bottom: 0px;
-        height: 100%;
-        width: 50%;
-      }
-
-      @include portrait-min-width-mixin("Vertical_Display") {
-        height: 60dvh;
-        width: 100%;
+      @include breakpoint-mixin("Laptop_M") {
+        text-align: end;
+        padding: 0;
+        width: 45%;
       }
 
       .featureTitle {
@@ -92,139 +69,27 @@
 
       h1,
       h2 {
-        width: 90%;
+        width: 100%;
 
-        @include breakpoint-mixin("Laptop_S") {
-          max-width: 80%;
+        @include breakpoint-mixin("Laptop_M") {
+          max-width: 90%;
         }
       }
     }
   }
 
-  @include breakpoint-mixin("Laptop_S") {
-    .left {
-      .featureBanner_left {
-        border-right: 0.5px solid $border;
-      }
-    }
-
-    .right {
+  .left {
+    //Reverse columns on laptop only
+    @include breakpoint-mixin("Laptop_M") {
       flex-direction: row-reverse;
 
-      .featureBanner_right {
-        border-right: 0.5px solid $border;
-      }
-    }
-  }
-
-  @include portrait-min-width-mixin("Vertical_Display") {
-    .left {
       .featureBanner_left {
-        border-right: 0px;
+        justify-content: flex-end;
       }
-    }
-
-    .right {
-      flex-direction: column;
 
       .featureBanner_right {
-        border-right: 0px;
-      }
-    }
-  }
-
-  .laptop {
-    img {
-      // position: absolute;
-      position: relative;
-      left: 0%;
-      height: 170px;
-
-      @include breakpoint-mixin("Mobile_M") {
-        height: 205px;
-      }
-
-      @include breakpoint-mixin("Mobile_L") {
-        height: 230px;
-      }
-
-      @include breakpoint-mixin("Tablet") {
-        // height: 90%;
-        height: 370px;
-      }
-
-      @include breakpoint-mixin("Laptop_S") {
-        position: absolute;
-        left: -20%;
-        height: 380px;
-      }
-
-      @include breakpoint-mixin("Laptop_M") {
-        left: -10%;
-        height: 410px;
-      }
-
-      @include breakpoint-mixin("Laptop_L") {
-        height: 470px;
-      }
-
-      @include breakpoint-mixin("Desktop_S") {
-        left: -12%;
-        height: 540px;
-      }
-
-      @include breakpoint-mixin("Desktop_M") {
-        left: 0%;
-        position: relative;
-        height: 450px;
-      }
-
-      @include breakpoint-mixin("Desktop_L") {
-        height: 600px;
-      }
-
-      @include portrait-min-width-mixin("Vertical_Display") {
-        position: relative;
-        left: 0%;
-        height: 530px;
-      }
-    }
-  }
-
-  .mobile {
-    img {
-      height: 410px;
-
-      @include breakpoint-mixin("Mobile_M") {
-        height: 440px;
-      }
-
-      @include breakpoint-mixin("Mobile_L") {
-        height: 500px;
-      }
-
-      @include breakpoint-mixin("Tablet") {
-        height: 700px;
-      }
-
-      @include breakpoint-mixin("Laptop_S") {
-        height: 570px;
-      }
-
-      @include breakpoint-mixin("Laptop_M") {
-        height: 610px;
-      }
-
-      @include breakpoint-mixin("Desktop_S") {
-        height: 700px;
-      }
-
-      @include breakpoint-mixin("Desktop_M") {
-        height: 730px;
-      }
-
-      @include breakpoint-mixin("Desktop_L") {
-        height: 800px;
+        align-items: flex-start;
+        text-align: start;
       }
     }
   }
