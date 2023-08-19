@@ -30,7 +30,7 @@ const RoadmapItem = ({ data }: RoadmapItemProps) => {
         </div>
       )}
       <h3 id={styles.date}>{convertDateFunc(data.date)}</h3>
-      <p id={styles.description}>{data.description}</p>
+      <h2 id={styles.description}>{data.description}</h2>
     </div>
   );
 };
