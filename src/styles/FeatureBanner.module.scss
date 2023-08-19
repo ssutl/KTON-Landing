@@ -17,8 +17,10 @@
     width: 90%;
     display: flex;
     flex-direction: column;
+    padding: 30px 0px;
 
     @include breakpoint-mixin("Laptop_M") {
+      padding: 0;
       height: 100%;
       flex-direction: row;
       width: 95%;
