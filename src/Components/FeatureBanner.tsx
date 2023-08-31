@@ -1,4 +1,5 @@
 import styles from "../styles/FeatureBanner.module.scss";
+import { useRouter } from "next/router";
 
 export interface FeatureBannerProps {
   image: "Book" | "Highlights" | "Share" | "Library" | "Graphs";
@@ -7,6 +8,7 @@ export interface FeatureBannerProps {
 
 const FeatureBanner = ({ image, side }: FeatureBannerProps) => {
   const url = `/Resources/${image}.png`;
+  const router = useRouter();
 
   const description = {
     Book: (
@@ -49,6 +51,12 @@ const FeatureBanner = ({ image, side }: FeatureBannerProps) => {
           organise, annotate and export your kindle highlights. Finding your
           highlights made easy, happy reading with KTON! 📖📝
         </h2>
+        <p
+          className={styles.demoButton}
+          onClick={() => router.push("https://app.kton.xyz/Demo")}
+        >
+          Click Here To Demo
+        </p>
       </>
     ),
     Graphs: (

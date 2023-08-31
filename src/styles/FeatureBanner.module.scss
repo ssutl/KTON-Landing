@@ -77,6 +77,14 @@
           max-width: 90%;
         }
       }
+
+      .demoButton {
+        padding: 5px 15px;
+        background-color: $kton-blue;
+        border-radius: 3px;
+        margin-top: 25px;
+        cursor: pointer;
+      }
     }
   }
 
