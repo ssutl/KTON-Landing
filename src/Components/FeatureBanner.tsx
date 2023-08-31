@@ -55,7 +55,7 @@ const FeatureBanner = ({ image, side }: FeatureBannerProps) => {
           className={styles.demoButton}
           onClick={() => router.push("https://app.kton.xyz/Demo")}
         >
-          Click Here To Demo
+          Click Here To Demo For Free
         </p>
       </>
     ),
