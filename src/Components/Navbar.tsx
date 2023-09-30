@@ -6,8 +6,12 @@ import axios from "axios";
 export default function Navbar() {
   const router = useRouter();
   const [total, setTotal] = useState<number | undefined>(undefined);
+  //get screenwidth
+  const [screenWidth, setScreenWidth] = useState<number | undefined>(undefined);
 
   useEffect(() => {
+    setScreenWidth(window.innerWidth);
+
     const getTotal = async () => {
       const response = await axios({
         method: "GET",
@@ -24,6 +28,19 @@ export default function Navbar() {
   }, []);
 
   //Display the navbar
+  const pricingP = () => {
+    return (
+      <p
+        onClick={() =>
+          document.getElementById("priceSection")?.scrollIntoView({
+            behavior: "smooth",
+          })
+        }
+      >
+        {screenWidth && screenWidth < 1024 ? "💵" : "Pricing"}
+      </p>
+    );
+  };
 
   return (
     <>
@@ -39,7 +56,7 @@ export default function Navbar() {
             </p>
             <p onClick={() => router.push("/Terms")}>Terms</p>
             <p onClick={() => router.push("/Roadmap")}>Roadmap</p>
-            {/* <p onClick={() => router.push("/Membership")}>Pricing</p> */}
+            {screenWidth && screenWidth > 1024 && pricingP()}
           </div>
         </div>
       </div>
@@ -48,6 +65,7 @@ export default function Navbar() {
           <p>{`OVER ${
             total ? total.toLocaleString() : "10, 000"
           } IMPORTED HIGHLIGHTS`}</p>
+          {screenWidth && screenWidth < 1024 && pricingP()}
         </div>
       </div>
     </>

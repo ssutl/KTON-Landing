@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/Landing.module.scss";
 import FeatureBanner from "@/Components/FeatureBanner";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
+import Membership from "./Membership";
 
 export default function Landing() {
   return (
@@ -16,6 +17,7 @@ export default function Landing() {
         <FeatureBanner image="Book" side="left" />
         <FeatureBanner image="Graphs" side="right" />
         <FeatureBanner image="Share" side="left" />
+        <Membership />
       </div>
     </>
   );
