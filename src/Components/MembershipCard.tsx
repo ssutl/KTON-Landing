@@ -19,7 +19,7 @@ const MembershipCard = ({ type }: MembershipCardProps) => {
       if (billing_type === "Monthly") {
         setPrice(3);
       } else {
-        setPrice(36);
+        setPrice(30);
       }
     }
   }, [billing_type]);
