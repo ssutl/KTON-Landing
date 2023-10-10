@@ -31,11 +31,14 @@ export default function Navbar() {
   const pricingP = () => {
     return (
       <p
-        onClick={() =>
-          document.getElementById("priceSection")?.scrollIntoView({
-            behavior: "smooth",
-          })
-        }
+        onClick={() => {
+          router.push("/");
+          setTimeout(() => {
+            document.getElementById("priceSection")?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }, 200);
+        }}
       >
         {screenWidth && screenWidth < 1024 ? "💵" : "Pricing"}
       </p>
