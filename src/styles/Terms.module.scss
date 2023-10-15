@@ -1,63 +1,94 @@
 @import "../styles/Breakpoints.module.scss";
 
+.title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.content {
+	font-size: 1.2rem;
+	line-height: 30px;
+	margin-bottom: 20px;
+	font-weight: 100;
+}
+
 .termsPage {
-  overflow-y: auto;
-  height: 86dvh;
-  display: flex;
-  justify-content: center;
+	overflow-y: auto;
+	height: 86dvh;
+	display: flex;
+	justify-content: center;
 
-  @include breakpoint-mixin("Tablet") {
-    height: 90dvh;
-  }
+	@include breakpoint-mixin("Tablet") {
+		height: 90dvh;
+	}
 
-  @include breakpoint-mixin("Laptop_S") {
-    height: 86dvh;
-  }
+	@include breakpoint-mixin("Laptop_S") {
+		height: 86dvh;
+	}
 
-  @include breakpoint-mixin("Desktop_M") {
-    height: 90dvh;
-  }
+	@include breakpoint-mixin("Desktop_M") {
+		height: 90dvh;
+	}
 
-  @include portrait-min-width-mixin("Vertical_Display") {
-    height: 94dvh;
-  }
+	@include portrait-min-width-mixin("Vertical_Display") {
+		height: 94dvh;
+	}
 
-  .termsPage_Width {
-    width: 90%;
-    height: fit-content;
-    padding: 20px 0px;
+	.termsPage_Width {
+		font-size: 1.2rem;
+		line-height: 30px;
+		margin-bottom: 20px;
+		font-weight: 100;
+		width: 90%;
+		height: fit-content;
+		padding: 20px 0px;
 
-    @include breakpoint-mixin("Laptop_S") {
-      width: 95%;
-    }
+		@include breakpoint-mixin("Laptop_S") {
+			width: 95%;
+		}
 
-    h1,
-    p {
-      margin-bottom: 20px;
-    }
+		h1 {
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
 
-    p {
-      line-height: 30px;
+		p {
+			line-height: 30px;
 
-      @include breakpoint-mixin("Laptop_S") {
-        line-height: 35px;
-      }
-    }
-  }
+			@include breakpoint-mixin("Laptop_S") {
+				line-height: 35px;
+			}
+		}
+
+		ol {
+			// list-style: none;
+			counter-reset: item;
+			padding-inline-start: 15px;
+			li {
+				counter-increment: item;
+				&:before {
+					// margin-left: 10px;
+					// content: counters(item, "-") " ";
+					display: inline-block;
+				}
+			}
+		}
+	}
 }
 
 @include breakpoint-mixin("Laptop_S") {
-  .termsPage::-webkit-scrollbar {
-    height: 100%;
-    background-color: rgb(45, 41, 41);
-    width: 10px;
-  }
+	.termsPage::-webkit-scrollbar {
+		height: 100%;
+		background-color: rgb(45, 41, 41);
+		width: 10px;
+	}
 
-  .termsPage::-webkit-scrollbar-thumb {
-    background-color: rgba(70, 68, 68, 0.428);
-    border: 1px solid transparent;
-    background-clip: content-box;
-    border-radius: 10px;
-    height: 40px;
-  }
+	.termsPage::-webkit-scrollbar-thumb {
+		background-color: rgba(70, 68, 68, 0.428);
+		border: 1px solid transparent;
+		background-clip: content-box;
+		border-radius: 10px;
+		height: 40px;
+	}
 }
