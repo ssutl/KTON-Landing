@@ -11,7 +11,7 @@ export default class NotionService {
 		this.n2m = new NotionToMarkdown({ notionClient: this.client });
 	}
 
-	async getFeatureReleaseItems(): Promise<FeatureReleaseItem[]> {
+	async getFeatureReleaseItems(): Promise<FeatureReleaseItem[] | undefined> {
 		const database_id = process.env.NOTION_DATABASE_ID || "";
 
 		const response = await this.client.databases.query({

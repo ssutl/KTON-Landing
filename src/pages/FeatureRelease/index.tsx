@@ -1,13 +1,13 @@
 import util from "util";
 import Head from "next/head";
 import Navbar from "@/Components/Navbar";
-import { InferGetServerSidePropsType } from "next";
+import { InferGetStaticPropsType } from "next";
 import NotionService from "../../../services/notion-service";
 import axios from "axios";
 import styles from "../../styles/FeatureRelease.module.scss";
 import FeatureReleaseItem from "@/Components/FeatureReleaseItem";
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
 	const notionService = new NotionService();
 	const featureReleaseItems = await notionService.getFeatureReleaseItems();
 
@@ -18,7 +18,7 @@ export const getServerSideProps = async () => {
 	};
 };
 
-const FeatureReleases = ({ featureReleaseItems }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+const FeatureReleases = ({ featureReleaseItems }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	console.log(util.inspect({ featureReleaseItems }, { showHidden: false, depth: null, colors: true }));
 	return (
 		<>
@@ -28,7 +28,7 @@ const FeatureReleases = ({ featureReleaseItems }: InferGetServerSidePropsType<ty
 
 			<div className={styles.featureReleasePage}>
 				<div className={styles.featureReleasePage_Width}>
-					{featureReleaseItems.length > 0 ? (
+					{featureReleaseItems != null && featureReleaseItems.length > 0 ? (
 						featureReleaseItems.map((featureReleaseItem, index) => (
 							<FeatureReleaseItem data={featureReleaseItem} key={index} />
 						))
