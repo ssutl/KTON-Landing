@@ -19,7 +19,6 @@ export const getStaticProps = async () => {
 };
 
 const FeatureReleases = ({ featureReleaseItems }: InferGetStaticPropsType<typeof getStaticProps>) => {
-	console.log(util.inspect({ featureReleaseItems }, { showHidden: false, depth: null, colors: true }));
 	return (
 		<>
 			<Head>
