@@ -41,9 +41,9 @@ const FeatureBanner = ({ image, side }: FeatureBannerProps) => {
     ),
     Graphs: (
       <>
-        <h1 className={styles.featureTitle}>Visualize your reading</h1>
+        <h1 className={styles.featureTitle}>Visualise your reading</h1>
         <h2>
-          KTON allows you to visualize your reading habits and progress. See how
+          KTON allows you to visualise your reading habits and progress. See how
           many books you&apos;ve read, how many highlights you&apos;ve made and
           how many words you&apos;ve read.
         </h2>
