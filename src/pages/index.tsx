@@ -16,7 +16,6 @@ export default function Landing() {
       </Head>
 
       <div className={styles.main}>
-        {/* <LandingDisplay /> */}
         <FeatureBanner image="Library" side="right" />
         <FeatureBanner image="Book" side="left" />
         <FeatureBanner image="Graphs" side="right" />
