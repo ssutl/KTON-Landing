@@ -2,7 +2,7 @@ import styles from "../styles/FeatureBanner.module.scss";
 import { useRouter } from "next/router";
 
 export interface FeatureBannerProps {
-  image: "Book" | "Highlights" | "Share" | "Library" | "Graphs";
+  image: "Book" | "Highlights" | "Library" | "Graphs";
   side: "left" | "right";
 }
 
@@ -32,17 +32,17 @@ const FeatureBanner = ({ image, side }: FeatureBannerProps) => {
         </h2>
       </>
     ),
-    Share: (
-      <>
-        <h1 className={styles.featureTitle}>Sharing made easy</h1>
-        <h2>
-          Break free from limitations of a single platform and share your Kindle
-          highlights anywhere. KTON allows you to effortlessly export your
-          highlights in multiple formats, enabling you to integrate them into
-          your preferred workflows and engage with them on your terms
-        </h2>
-      </>
-    ),
+    // Share: (
+    //   <>
+    //     <h1 className={styles.featureTitle}>Sharing made easy</h1>
+    //     <h2>
+    //       Break free from limitations of a single platform and share your Kindle
+    //       highlights anywhere. KTON allows you to effortlessly export your
+    //       highlights in multiple formats, enabling you to integrate them into
+    //       your preferred workflows and engage with them on your terms
+    //     </h2>
+    //   </>
+    // ),
     Library: (
       <>
         <h1 className={styles.featureTitle}>Welcome to KTON</h1>
