@@ -5,20 +5,21 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Membership from "./Membership";
 
 export default function Landing() {
-  return (
-    <>
-      <Head>
-        <title>KTON</title>
-      </Head>
+	return (
+		<>
+			<Head>
+				<title>KTON</title>
+				<meta name="google-site-verification" content="5rYKI5qv54lywaICk-K65AEQNxKGIbHYwO0IdAsLVCo" />
+			</Head>
 
-      <div className={styles.main}>
-        {/* <LandingDisplay /> */}
-        <FeatureBanner image="Library" side="right" />
-        <FeatureBanner image="Book" side="left" />
-        <FeatureBanner image="Graphs" side="right" />
-        <FeatureBanner image="Share" side="left" />
-        <Membership />
-      </div>
-    </>
-  );
+			<div className={styles.main}>
+				{/* <LandingDisplay /> */}
+				<FeatureBanner image="Library" side="right" />
+				<FeatureBanner image="Book" side="left" />
+				<FeatureBanner image="Graphs" side="right" />
+				<FeatureBanner image="Share" side="left" />
+				<Membership />
+			</div>
+		</>
+	);
 }

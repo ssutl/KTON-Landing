@@ -6,8 +6,13 @@ import axios from "axios";
 export default function Navbar() {
 	const router = useRouter();
 	const [total, setTotal] = useState<number | undefined>(undefined);
+	const [isOpen, setIsOpen] = useState(false);
 	//get screenwidth
 	const [screenWidth, setScreenWidth] = useState<number | undefined>(undefined);
+
+	const handleClick = () => {
+		setIsOpen(!isOpen);
+	};
 
 	useEffect(() => {
 		setScreenWidth(window.innerWidth);
@@ -40,32 +45,67 @@ export default function Navbar() {
 					}, 200);
 				}}
 			>
-				{screenWidth && screenWidth < 1024 ? "💵" : "Pricing"}
+				Pricing
 			</p>
 		);
 	};
 
-	return (
-		<>
-			<div className={styles.navbar}>
-				<div className={styles.navbarWidth}>
+	if (screenWidth && screenWidth > 1024) {
+		return (
+			<>
+				<div className={styles.navbar}>
+					<div className={styles.navbarWidth}>
+						<h3 onClick={() => router.push("/")}>KTON</h3>
+						<div className={styles.navigationButtons}>
+							<p onClick={() => router.push("https://app.kton.xyz")} id={styles.mainButton}>
+								Get Started
+							</p>
+							<p onClick={() => router.push("/Terms")}>Terms</p>
+							<p onClick={() => router.push("/FeatureRelease")}>Feature Releases</p>
+							{screenWidth && screenWidth > 1024 && pricingP()}
+						</div>
+					</div>
+				</div>
+				<div className={styles.header}>
+					<div className={styles.headerWidth}>
+						<p>{`OVER ${total ? total.toLocaleString() : "10, 000"} IMPORTED HIGHLIGHTS`}</p>
+					</div>
+				</div>
+			</>
+		);
+	} else if (screenWidth && screenWidth < 1024) {
+		return (
+			<div className={styles.mobileNavbar}>
+				<div className={styles.firstRow}>
 					<h3 onClick={() => router.push("/")}>KTON</h3>
-					<div className={styles.navigationButtons}>
-						<p onClick={() => router.push("https://app.kton.xyz")} id={styles.mainButton}>
-							Get Started
-						</p>
-						<p onClick={() => router.push("/Terms")}>Terms</p>
-						<p onClick={() => router.push("/FeatureRelease")}>Feature Releases</p>
-						{screenWidth && screenWidth > 1024 && pricingP()}
+					<nav role="navigation">
+						<div className={styles.burgerMenu}>
+							<button onClick={handleClick} className={isOpen ? styles.burgerButtonOpen : styles.burgerButtonClose} />
+							<div className={isOpen ? styles.burgerPanelOpen : styles.burgerPanelClose}>
+								<ul className={styles.burgerList} onClick={() => setIsOpen(false)}>
+									<li>
+										<p onClick={() => router.push("https://app.kton.xyz")} id={styles.mainButton}>
+											Get Started
+										</p>
+									</li>
+									<li>
+										<p onClick={() => router.push("/Terms")}>Terms</p>
+									</li>
+									<li>
+										<p onClick={() => router.push("/FeatureRelease")}>Feature Releases</p>
+									</li>
+									<li>{pricingP()}</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+				<div className={styles.secondRow}>
+					<div className={styles.headerWidth}>
+						<p>{`OVER ${total ? total.toLocaleString() : "10, 000"} IMPORTED HIGHLIGHTS`}</p>
 					</div>
 				</div>
 			</div>
-			<div className={styles.header}>
-				<div className={styles.headerWidth}>
-					<p>{`OVER ${total ? total.toLocaleString() : "10, 000"} IMPORTED HIGHLIGHTS`}</p>
-					{screenWidth && screenWidth < 1024 && pricingP()}
-				</div>
-			</div>
-		</>
-	);
+		);
+	}
 }
