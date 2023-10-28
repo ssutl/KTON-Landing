@@ -15,6 +15,14 @@ export default function Navbar() {
   };
 
   useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
     setScreenWidth(window.innerWidth);
 
     const getTotal = async () => {
