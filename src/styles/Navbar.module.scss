@@ -1,251 +1,268 @@
 @import "../styles/Breakpoints.module.scss";
 
 .navbar {
-	height: 7dvh;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	box-sizing: border-box;
-	border-bottom: 0.5px solid $border_mobile;
+  height: 7dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  border-bottom: 0.5px solid $border_mobile;
 
-	// color: white;
+  // color: white;
 
-	@include breakpoint-mixin("Tablet") {
-		height: 5dvh;
-	}
+  @include breakpoint-mixin("Tablet") {
+    height: 5dvh;
+  }
 
-	@include breakpoint-mixin("Laptop_S") {
-		border-bottom: 0.5px solid $border_laptop;
-		height: 7dvh;
-	}
+  @include breakpoint-mixin("Laptop_S") {
+    border-bottom: 0.5px solid $border_laptop;
+    height: 7dvh;
+  }
 
-	@include breakpoint-mixin("Desktop_M") {
-		height: 5dvh;
-	}
+  @include breakpoint-mixin("Desktop_M") {
+    height: 5dvh;
+  }
 
-	@include portrait-min-width-mixin("Vertical_Display") {
-		height: 3dvh;
-	}
+  @include portrait-min-width-mixin("Vertical_Display") {
+    height: 3dvh;
+  }
 
-	.navbarWidth {
-		width: 90%;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		font-weight: 500;
+  .navbarWidth {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
 
-		@include breakpoint-mixin("Laptop_S") {
-			width: 95%;
-		}
+    @include breakpoint-mixin("Laptop_S") {
+      width: 95%;
+    }
 
-		h3 {
-			cursor: pointer;
-		}
+    h3 {
+      cursor: pointer;
+    }
 
-		.navigationButtons {
-			width: fit-content;
-			display: flex;
+    .navigationButtons {
+      width: fit-content;
+      display: flex;
 
-			#mainButton {
-				width: 55px;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
+      #mainButton {
+        width: 55px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
-				@include breakpoint-mixin("Mobile_M") {
-					width: fit-content;
-				}
+        @include breakpoint-mixin("Mobile_M") {
+          width: fit-content;
+        }
 
-				background-color: $kton-blue;
-				font-weight: 350;
-			}
+        background-color: $kton-blue;
+        font-weight: 350;
+      }
 
-			p {
-				margin-left: 5px;
-				border-radius: 4px;
-				padding: 2px 10px;
-				box-sizing: border-box;
+      p {
+        margin-left: 5px;
+        border-radius: 4px;
+        padding: 2px 10px;
+        box-sizing: border-box;
 
-				@include breakpoint-mixin("Laptop_S") {
-					cursor: pointer;
-					margin-left: 10px;
+        @include breakpoint-mixin("Laptop_S") {
+          cursor: pointer;
+          margin-left: 10px;
 
-					&:hover {
-						opacity: 0.5;
-						background-color: $hover;
-					}
-				}
+          &:hover {
+            opacity: 0.5;
+            background-color: $hover;
+          }
+        }
 
-				// @include breakpoint-mixin("Desktop_M") {
-				//   padding: 4px 10px;
-				// }
-			}
-		}
-	}
+        // @include breakpoint-mixin("Desktop_M") {
+        //   padding: 4px 10px;
+        // }
+      }
+    }
+  }
 }
 
 .header {
-	width: 100%;
-	display: flex;
-	border-bottom: 0.5px solid $border_mobile;
-	justify-content: center;
-	align-items: center;
-	box-sizing: border-box;
-	height: 7dvh;
+  width: 100%;
+  display: flex;
+  border-bottom: 0.5px solid $border_mobile;
+  justify-content: center;
+  align-items: center;
 
-	@include breakpoint-mixin("Tablet") {
-		border-bottom: 0.5px solid $border_laptop;
-		height: 5dvh;
-	}
+  @include breakpoint-mixin("Laptop_S") {
+    border-bottom: 0.5px solid $border_laptop;
+    height: 7dvh;
+  }
 
-	@include breakpoint-mixin("Laptop_S") {
-		height: 7dvh;
-	}
+  @include breakpoint-mixin("Desktop_M") {
+    height: 5dvh;
+  }
 
-	@include breakpoint-mixin("Desktop_M") {
-		height: 5dvh;
-	}
+  @include portrait-min-width-mixin("Vertical_Display") {
+    height: 3dvh;
+  }
 
-	@include portrait-min-width-mixin("Vertical_Display") {
-		height: 3dvh;
-	}
+  .headerWidth {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    justify-content: space-between;
 
-	.headerWidth {
-		width: 90%;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		font-weight: 500;
-		justify-content: space-between;
+    p {
+      cursor: pointer;
+    }
 
-		p {
-			cursor: pointer;
-		}
+    span {
+      cursor: pointer;
 
-		span {
-			cursor: pointer;
+      @include breakpoint-mixin("Laptop_S") {
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
 
-			@include breakpoint-mixin("Laptop_S") {
-				&:hover {
-					opacity: 0.5;
-				}
-			}
-		}
-
-		@include breakpoint-mixin("Laptop_S") {
-			width: 95%;
-		}
-	}
+    @include breakpoint-mixin("Laptop_S") {
+      width: 95%;
+    }
+  }
 }
 
 .headerExpand {
-	padding: 10px 0px 10px 0px;
-	height: fit-content;
+  padding: 10px 0px 10px 0px;
+  height: fit-content;
 }
 
 .burgerButtonOpen {
-	outline: none;
-	border: none;
-	cursor: pointer;
-	width: 20px;
-	height: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  background-color: transparent;
 
-	z-index: 10;
-	background-color: transparent;
+  background-repeat: no-repeat;
+  // background-position: center center;
+  background-size: contain;
+  -webkit-tap-highlight-color: transparent;
 
-	background-repeat: no-repeat;
-	// background-position: center center;
-	background-size: contain;
-	-webkit-tap-highlight-color: transparent;
-
-	background-image: url(https://res.cloudinary.com/dnpyq0ocz/image/upload/v1588441892/icon-hamburger-close.svg);
+  background-image: url(https://res.cloudinary.com/dnpyq0ocz/image/upload/v1588441892/icon-hamburger-close.svg);
 }
 
 .burgerMenu {
-	display: flex;
+  display: flex;
 }
 .burgerButtonClose {
-	outline: none;
-	border: none;
-	cursor: pointer;
-	width: 20px;
-	height: 20px;
-	position: relative;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: relative;
 
-	z-index: 10;
-	background-color: transparent;
-	background-image: url(https://res.cloudinary.com/dnpyq0ocz/image/upload/v1588441892/icon-hamburger.svg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: contain;
-	-webkit-tap-highlight-color: transparent;
+  z-index: 10;
+  background-color: transparent;
+  background-image: url(https://res.cloudinary.com/dnpyq0ocz/image/upload/v1588441892/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .burgerPanelOpen {
-	max-width: 500px;
-	background-color: #2b2b2b;
-	background-size: 117px 188px;
-	transition: all 0.4s cubic-bezier(0.42, 0, 0.34, 1.01);
-	position: fixed;
-	z-index: 5;
-
-	height: 100%;
-
-	padding: 20px;
-	padding-top: 80px;
-	display: flex;
-	top: -20px;
-	visibility: visible;
-	width: 100%;
-	right: 0;
-	opacity: 1;
+  width: 100%;
+  background-color: #2b2b2b;
+  background-size: 117px 188px;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.34, 1.01);
+  position: fixed;
+  box-sizing: border-box;
+  z-index: 5;
+  height: 100dvh;
+  padding-top: 80px;
+  padding-right: 20px;
+  top: 0px;
+  right: 0;
+  visibility: visible;
+  opacity: 1;
 }
 .burgerPanelClose {
-	max-width: 500px;
-	background-color: #2b2b2b;
-	background-size: 117px 188px;
-	transition: all 0.4s cubic-bezier(0.42, 0, 0.34, 1.01);
-	position: fixed;
-	z-index: 5;
-	right: -100%;
-	top: -20px;
-	height: 100%;
-	width: 100%;
-	visibility: hidden;
-	opacity: 0;
-	// padding: 3em;
-	display: flex;
+  max-width: 500px;
+  background-color: #2b2b2b;
+  background-size: 117px 188px;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.34, 1.01);
+  position: fixed;
+  z-index: 5;
+  right: -100%;
+  top: -20px;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  // padding: 3em;
+  display: flex;
 }
 
 .burgerList {
-	margin: 0 0 auto auto;
+  margin: 0 0 auto auto;
 
-	li {
-		list-style: none;
-		font-size: 2em;
-		text-align: right;
+  li {
+    list-style: none;
+    font-size: 2em;
+    text-align: right;
 
-		& + li {
-			margin-top: 1em;
-		}
-	}
+    & + li {
+      margin-top: 1em;
+    }
+  }
 }
 
 .mobileNavbar {
-	display: flex;
-	flex-direction: column;
-	padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-	.firstRow {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.secondRow {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-top: 20px;
-	}
+  .headerWidth {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    justify-content: space-between;
+  }
+
+  .firstRow {
+    height: 7dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 0.5px solid $border_mobile;
+    width: 100%;
+
+    @include breakpoint-mixin("Tablet") {
+      border-bottom: 0.5px solid $border_laptop;
+      height: 5dvh;
+    }
+  }
+  .secondRow {
+    height: 7dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 7dvh;
+    border-bottom: 0.5px solid $border_mobile;
+    width: 100%;
+
+    @include breakpoint-mixin("Tablet") {
+      border-bottom: 0.5px solid $border_laptop;
+      height: 5dvh;
+    }
+  }
 }
