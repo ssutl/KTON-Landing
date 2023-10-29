@@ -22,7 +22,7 @@ const FeatureReleases = ({ featureReleaseItems }: InferGetStaticPropsType<typeof
 	return (
 		<>
 			<Head>
-				<title>KTON</title>
+				<title>KTON feature releases</title>
 			</Head>
 
 			<div className={styles.featureReleasePage}>
