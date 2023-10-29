@@ -6,7 +6,7 @@ export default function Document() {
 			<Head>
 				<meta
 					name="description"
-					content="A platform to organise, annotate and export your imported kindle highlights 📖📝"
+					content="Organise, annotate and share your highlights from this all-in-one clipppings.txt management platform 📖📝"
 				/>
 
 				<meta name="google-site-verification" content="5rYKI5qv54lywaICk-K65AEQNxKGIbHYwO0IdAsLVCo" />
@@ -16,7 +16,7 @@ export default function Document() {
 				<meta property="og:title" content="KTON: Kindle Highlight Manager" />
 				<meta
 					property="og:description"
-					content="A platform to organise, annotate and export your imported kindle highlights 📖📝"
+					content="Organise, annotate and share your highlights from this all-in-one clipppings.txt management platform 📖📝"
 				/>
 				<meta property="og:image" content="https://app.kton.xyz/images/SEO-image.png" />
 
@@ -26,7 +26,7 @@ export default function Document() {
 				<meta name="twitter:title" content="KTON: Kindle Highlight Manager" />
 				<meta
 					name="twitter:description"
-					content="A platform to organise, annotate and export your imported kindle highlights 📖📝"
+					content="Organise, annotate and share your highlights from this all-in-one clipppings.txt management platform 📖📝"
 				/>
 				<meta name="twitter:image" content="https://app.kton.xyz/images/SEO-image.png" />
 
