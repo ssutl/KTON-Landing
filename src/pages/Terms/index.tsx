@@ -8,14 +8,14 @@ const termsData = [
 	{
 		title: "Introduction",
 		content: [
-			"These Terms govern your use of the KTON website, available at [website URL], and any related services (collectively referred to as the 'Service'). Your use of the Service is also subject to our Privacy Policy, available at [privacy policy URL]. By using the Service, you acknowledge that you have read, understood, and agreed to these Terms and our Privacy Policy.",
+			"These Terms govern your use of the KTON website, available at kton.xyz, and any related services (collectively referred to as the 'Service'). By using the Service, you acknowledge that you have read, understood, and agreed to these Terms and our Privacy Policy.",
 			"If you do not agree with these Terms or our Privacy Policy, please do not use the Service. These Terms apply to all users and visitors of the Service.",
 		],
 	},
 	{
 		title: "Communications",
 		content: [
-			"By creating an account on our Service, you consent to receive newsletters, marketing materials, and other communications from us. You may opt out of these communications by following the unsubscribe link provided or contacting us at [contact email].",
+			"By creating an account on our Service, you consent to receive newsletters, marketing materials, and other communications from us. You may opt out of these communications by following the unsubscribe link provided.",
 		],
 	},
 	{
