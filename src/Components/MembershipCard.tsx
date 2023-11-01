@@ -33,7 +33,11 @@ const MembershipCard = ({ type }: MembershipCardProps) => {
       plan: "Free",
     },
     {
-      description: "Reading metrics and insights",
+      description: "Reading metrics and insights.",
+      plan: "Free",
+    },
+    {
+      description: "Share highlights as images.",
       plan: "Free",
     },
     {
@@ -42,23 +46,27 @@ const MembershipCard = ({ type }: MembershipCardProps) => {
       plan: "Free",
     },
     {
-      description: "Add custom book covers",
+      description: "Add custom book covers.",
       plan: "Free",
     },
     {
-      description: "Export highlights to Notion",
+      description: "Export highlights to Notion.",
       plan: "Premium",
     },
     {
-      description: "Export highlights as CSV",
+      description: "Export highlights as CSV.",
       plan: "Premium",
     },
     {
-      description: "Unlimited creation of highlight tags",
+      description: "Unlimited creation of highlight tags.",
       plan: "Premium",
     },
     {
-      description: "Unlimited creation of book genres",
+      description: "Unlimited creation of book genres.",
+      plan: "Premium",
+    },
+    {
+      description: "No image watermarks when sharing.",
       plan: "Premium",
     },
   ];
