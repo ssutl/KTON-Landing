@@ -8,11 +8,7 @@
 
   @include breakpoint-mixin("Laptop_S") {
     flex-direction: row;
-    height: 93dvh;
-  }
-
-  @include breakpoint-mixin("Desktop_M") {
-    height: 95dvh;
+    padding: 30px 0px;
   }
 
   .cardHeightContainer {
