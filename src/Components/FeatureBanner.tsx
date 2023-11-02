@@ -2,7 +2,7 @@ import styles from "../styles/FeatureBanner.module.scss";
 import { useRouter } from "next/router";
 
 export interface FeatureBannerProps {
-  image: "Book" | "Library" | "Graphs";
+  image: "Book" | "Library" | "Graphs" | "Share" | "Highlights" | "Export";
   side: "left" | "right";
 }
 
@@ -46,6 +46,35 @@ const FeatureBanner = ({ image, side }: FeatureBannerProps) => {
           KTON allows you to visualise your reading habits and progress. See how
           many books you&apos;ve read, how many highlights you&apos;ve made and
           how many words you&apos;ve read.
+        </h2>
+      </>
+    ),
+    Share: (
+      <>
+        <h1 className={styles.featureTitle}>Share your highlights</h1>
+        <h2>
+          Share your highlights as images. Create custom images with your
+          favourite quotes, ready to share them on your social platforms.
+        </h2>
+      </>
+    ),
+    Highlights: (
+      <>
+        <h1 className={styles.featureTitle}>Categorise highlights and books</h1>
+        <h2>
+          KTON allows you to categorise your highlights and books using tags and
+          genres. This allows you to organise your highlights and books in a way
+          that makes sense to you.
+        </h2>
+      </>
+    ),
+    Export: (
+      <>
+        <h1 className={styles.featureTitle}>Export your highlights</h1>
+        <h2>
+          Effortlessly export your highlights. Export to notion for in-depth
+          organisation or as a CSV. Ensuring flexibility and portability of your
+          data.
         </h2>
       </>
     ),
