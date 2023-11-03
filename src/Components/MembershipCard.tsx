@@ -46,6 +46,10 @@ const MembershipCard = ({ type }: MembershipCardProps) => {
       plan: "Free",
     },
     {
+      description: "Limited to 100 highlights per book.",
+      plan: "Free",
+    },
+    {
       description: "Add custom book covers.",
       plan: "Free",
     },
@@ -69,17 +73,29 @@ const MembershipCard = ({ type }: MembershipCardProps) => {
       description: "No image watermarks when sharing.",
       plan: "Premium",
     },
+    {
+      description: "Unlimited highlights per book.",
+      plan: "Premium",
+    },
   ];
 
   // Modify feature descriptions for the Premium card
-  const modifiedFeatures = platformFeatures.map((feature) => {
-    if (type === "Premium") {
-      feature.description = feature.description
-        .replace(/, limited to the creation of \d+ book genres/, "")
-        .replace(/. Limited to the creation of \d+ tags/, "");
-    }
-    return feature;
-  });
+  const modifiedFeatures = platformFeatures
+    .map((feature) => {
+      if (type === "Premium") {
+        feature.description = feature.description
+          .replace(/, limited to the creation of \d+ book genres/, "")
+          .replace(/. Limited to the creation of \d+ tags/, "");
+      }
+      return feature;
+    })
+    .filter((new_f) => {
+      if (type === "Premium") {
+        return new_f.description !== "Limited to 100 highlights per book.";
+      } else {
+        return new_f;
+      }
+    });
 
   return (
     <div className={`${styles.membershipCard}`}>
