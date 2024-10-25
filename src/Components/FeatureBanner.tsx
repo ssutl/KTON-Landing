@@ -33,7 +33,7 @@ const FeatureBanner = ({ image, side }: FeatureBannerProps) => {
         </h2>
         <p
           className={styles.demoButton}
-          onClick={() => router.push("https://app.kton.xyz/Demo")}
+          onClick={() => router.push("https://kton.vercel.app/Demo")}
         >
           Click Here To Demo For Free
         </p>
