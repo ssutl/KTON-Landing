@@ -25,19 +25,19 @@ export default function Navbar() {
   useEffect(() => {
     setScreenWidth(window.innerWidth);
 
-    const getTotal = async () => {
-      const response = await axios({
-        method: "GET",
-        url: `${process.env.NEXT_PUBLIC_BACKENDURL}/total-highlights`,
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+    // const getTotal = async () => {
+    //   const response = await axios({
+    //     method: "GET",
+    //     url: `${process.env.NEXT_PUBLIC_BACKENDURL}/total-highlights`,
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //   });
 
-      setTotal(response.data);
-    };
+    //   setTotal(response.data);
+    // };
 
-    getTotal();
+    // getTotal();
   }, []);
 
   //Display the navbar
