@@ -10,6 +10,7 @@ https://github.com/user-attachments/assets/1424fa34-2ed0-46ef-a670-42f4f7d5a908
 - **User-Friendly Interface**: Modern, clean design to showcase KTON's features.
 - **Responsive Design**: Optimized for both mobile and desktop users.
 - **Highlight Showcase**: Provides an overview of Kindle highlights management capabilities.
+- **Feature showcase**: Utilises Notion as a CMS to manage feature updates and bug fixes to display on the project roadmap.
 
 ## Installation
 
