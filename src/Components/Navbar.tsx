@@ -66,7 +66,7 @@ export default function Navbar() {
             <h3 onClick={() => router.push("/")}>KTON</h3>
             <div className={styles.navigationButtons}>
               <p
-                onClick={() => router.push("https://app.kton.xyz")}
+                onClick={() => router.push("https://kton.vercel.app/Demo")}
                 id={styles.mainButton}
               >
                 Get Started
@@ -113,7 +113,7 @@ export default function Navbar() {
                   >
                     <li>
                       <p
-                        onClick={() => router.push("https://app.kton.xyz")}
+                        onClick={() => router.push("https://kton.vercel.app/Demo")}
                         id={styles.mainButton}
                       >
                         Get Started
